@@ -6,18 +6,37 @@
         </title>
         <style>
             h1{margin-left: 0px;}
-            h2{margin-left: 40px;}
+            h2{margin-left: 40px; color:black;}
             h3{margin-left: 80px;}
             h4{margin-left: 120px;}
             h5{margin-left: 160px;}
             h6{margin-left: 200px;}
+
+            /*embed*/
+            /*<!----!>이거는 html주석모양*/
+                *{
+                    font-weight: bold;
+                    /*전체 선택자 : css초기화에 사용*/
+                }
+                li{
+                    color:blue;
+
+                }
+                .class_name{
+                    color:green;
+                }
+                #id_name{
+                    color:pink;
+                }
+
         </style>
+        <link rel="stylesheet" type="text/css" href="default.css">
     </head>
     <body>
         <!--h1~h6 순번x, 깊이(depth)o-->
         <h1>대한민국</h1>
         <p>아시아에서 가운데 있는</p>
-        <h2>서울</h2>
+        <h2 style="color:violet">서울</h2>
         <h3>영등포구</h3>
         <h3>송파구</h3>
         <h2>경기도</h2>
@@ -38,8 +57,8 @@
 
         <!--unorderd list 비순차적 목록(자리바꿔도 문제x)-->
         <ul>
-            <li>설탕 100g</li>
-            <li>소금 100g</li>
+            <li class="class_name">설탕 100g</li>
+            <li id="id_name">소금 100g</li>
             <li>물 100ml</li>
         </ul>
 
@@ -80,5 +99,49 @@
 
         2<sup>2</sup>
         H<sub>2</sub>0
+
+        <!--절대주소 상대주소 (0910)-->
+        <img src="images/dog.JPG" width="100px">
+        <img src="./images/dog.JPG"  height="100px">
+        <!--두 주소 모두 동일 -->
+        <!-- width, height값 동시에 사용하면 그림이 찌그러질수있움 -->
+<hr>
+
+        <!--table 도표-->
+        <!--table,tr,td-->
+        <!--colspan 열확장, rowspan 행확장-->
+        <style>
+            table,tr,td{border:solid 1px black;}
+        </style>
+        <table summary=" 요약 내용 ">
+            <caption>[표1] 표 제목</caption>
+            <!--thead, tbody, tfoot-->
+            <thead> <!--의미 강화를 위한 마크업-->
+            <tr>
+                <th>제목 1</th>
+                <th>제목 2</th>
+                <th>제목 3</th>
+                <th>제목 4</th>
+                <th>제목 5</th>
+            </tr>
+            </thead>
+            <tr>
+                <td colspan="2">1</td>
+                <td rowspan="2">2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+               <td>5</td>
+               <td>6</td>
+               <td>7</td>
+               <td>8</td>
+            <tr>
+        </table>
+
+        <!--div 공간분할,span 공간분할-->
+        <!--의미없이 쓰기 좋은 태그-->
+        <div> 블록형 </div>
+        <span> 인라인 </span>
     </body>
 </html>

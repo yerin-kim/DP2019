@@ -3,6 +3,10 @@
     <head>
         <title>자유주제</title>
         <style>
+            *{
+                font-weight: 100px;
+
+            }
                 h1{margin-left: 0px;}
                 h2{
                     margin-left: 40px;
@@ -28,11 +32,18 @@
                     font-size: 100px;
                    
                 }
+                .class_name{
+                    color:greenyellow;
+                }
+                #id_name{
+                    color:hotpink;
+                }
             </style>
+            <!-- <link rel="stylesheet" type="text/css" href="default.css">-->
     </head>
     <body>
         <!--h1~h6,br,hr,ul,ol,dl-->
-        <h1>세계 여행♣</h1>
+        <h1>♣세계 여행♣</h1>
 
         <h2>아시아</h2>
         <h3>중국</h3>
@@ -43,29 +54,35 @@
         <h3>뉴질랜드</h3>
         <h3>호주</h3>
 
-        <h3>독일</h3>
-        <h3>프랑스</h3>
-        <h3>그리스</h3>
         
 
         <h2>아프리카</h2>
         <h3>콩고</h3>
         <h3>가나</h3>
 
+
+        <h2>유럽</h2>
+
+        <h3>독일</h3>
+        <h3>프랑스</h3>
+        <h3>그리스</h3>
+
         <h3>영국</h3>
         <h4>런던</h4>
         <h5>버킹엄 궁전</h5>
         <h5>빅벤</h5>
         <h5>런던아이</h5>
+
         <h4>글래스고</h4>
         <h4>리버풀</h4>
 
-        <h2>유럽</h2>
+        
         <h3>포르투갈</h3>
 
         <h4>라구스</h4>
         <h5>해변</h5>
         <h6>해변에서 수영하기</h6>
+
         <h4>포르투</h4>
         <h5>바로크 양식 성당</h5>
         <h6>촘촘하게 얽힌 골목을 따라 바로크양식의 성당을 본다.</h6>
@@ -87,8 +104,8 @@
         <hr/>
 
         <ul>
-            <li> 해변에서 수영하기 </li>
-            <li> 에그타르트 맛보기</li>
+            <li class="class_name"> 해변에서 수영하기 </li>
+            <li id="id_name"> 에그타르트 맛보기</li>
             <li> 모루스 성까지 걷기</li>
         </ul>
 
@@ -110,7 +127,35 @@
         2<sup>2</sup>
         H<sub>2</sub>0
 
-  
+        <img src="images/dog.JPG" width="100px">
+        <hr>
+
+        <style>
+            table,tr,td{border:solid 1px black;}
+        </style>
+        <table>
+            <caption>숫자표</caption>
+            <tr>
+                <th>2018</th>
+                <th>2019</th>
+                <th>2020</th>
+            </tr>
+            <tr>
+                    <td rowspan="2">1</td>
+                    <td rowspan="2">2</td>
+                    <td rowspan="2">3</td>
+                    
+            </tr>
+            <td>
+                    <th>1월</th>
+                    <th>2월</th>
+                    <th>3월</th>
+                </td>
+        </table>
+
+        <div> 블록형 </div>
+        <span> 인라인 </span>
+
 
 
     </body>
