@@ -33,6 +33,7 @@
         <link rel="stylesheet" type="text/css" href="default.css">
     </head>
     <body>
+        <a href="index.html">돌아가기</a>
         <!--h1~h6 순번x, 깊이(depth)o-->
         <h1>대한민국</h1>
         <p>아시아에서 가운데 있는</p>
@@ -142,6 +143,45 @@
         <!--div 공간분할,span 공간분할-->
         <!--의미없이 쓰기 좋은 태그-->
         <div> 블록형 </div>
-        <span> 인라인 </span>
+        <span> 인라인 ㄴ</span>
+
+        <!--form 양식지 0924-->
+        <form>
+            <input type="text" placeholder="아이디를 입력하세요.">
+            <input type="password" placeholder="비밀번호를 입력하세요">
+            <!--radio버튼은 name이 중요-->
+            <input type="radio" name="rd1" checked>
+            <input type="radio" name="rd1">
+            <input type="radio" name="rd1">
+
+            <input type="radio" name="rd2">
+            <input type="radio" name="rd2">
+            <input type="radio" name="rd2">
+
+            <input type="checkbox"/>
+            <input type="checkbox"/>
+            <input type="checkbox"/>
+
+            <!--선택박스, 콤보박스-->
+            <!--선택할수있는 보기를 제공하기 위해-->
+            <!--직접입력으로 인한 오류를 방지하기 위해-->
+            <select>
+                <option>사이트 주소</option>
+                <option>www.naver.com</option>
+                <option>www.google.com</option>
+            </select>
+
+            <!--여러줄의 문자열-->
+            <!--cols(가로글자수), rows(세로줄수)-->
+            <textarea cols="20" rows="3">
+
+            </textarea>
+
+            <input type="button" value="버튼"/>
+            <input type="button" value="테스트 버튼" onclick="alert('테스트버튼이 눌렸습니다.')"/>
+
+            <input type="submit" value="제출">
+
+        </form>
     </body>
 </html>
