@@ -28,6 +28,10 @@
         div>ul>li{text-decoration: underline ;}
         /*자식 선택자: div의 자식(child) li*/
 
+        /*10월 1일 추가*/
+        div,ul,li{font-weight: bold;}
+        /*선택자 조합 : div와 ul과 li*/
+
         </style>
     </head>
     <body>
@@ -60,5 +64,138 @@
 
         </ul>
         </div>
+
+        <!--10월 1일 추가-->
+        <style>
+           #box_model,#inline_model{
+               /*박스모델에서만 쓰이는 명령. 인라인은 예시로 듦*/
+                background-color: gray;
+                width: 100px;
+                height: 100px;
+                margin:30px; /*바깥 여백*/
+                border: solid 1px black; 
+                /*경계선: 실선 두께 1px 검정색 */
+                padding: 20px; /*안쪽 여백*/
+
+
+            }
+        </style>
+        <div id="box_model">박스 모델</div>
+        <span id="inline_model">인라인 모델</span>
+
+        <style>
+            #box2{
+                margin: 30px 20px 10px 5px;
+                /*위 오른쪽 아래 왼쪽*/
+                margin: 50px 20px;
+                /* 상하 좌우*/
+                margin-top: 30px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                margin-left: 5px;
+                /*padding, border도 동일*/
+
+            }
+        
+        </style>
+        <div id="box2">방향별 여백</div>
+
+
+        <style>
+        #css_target{
+            color:red;
+        }
+        .css_class{
+            color:blue;
+
+        }
+        </style>
+        <div class="css_class" id="css_target" style="color:green">겹침과 개별성</div>
+
+
+        <style>
+         #color_sample{
+             color: black;
+             color:#000; /*컬러코드 #rgb*/
+             color: #000000 ; /*#rrggbb, 0~9 a~f*/
+             color:rgb(0,0,255); /*0~255*/
+             color:rgb(0%,0%, 100%) /*0%~100%*/
+             /*실제 화면에는 마지막 명령만 적용*/
+
+
+         }
+        </style>
+        <div id="color_sample">색상</div>
+
+
+        <style>
+         #position_target
+         {
+             /*static, relative, absolute, fixed*/
+             position: static; /*정적인 (기본) */
+             /* relative 관계적 (위치지정가능) */
+            position: absolute;/*절대적인 */
+            /*top right bottom left 위치 지정 가능 */
+            top:50px;
+            left:50px;
+            position: fixed; /*고정형 */
+         }
+        </style>
+        <div id="position_target">position</div>
+
+        <style>
+            #font_target{
+                font-family: Onyx, "돋움", Dotum, "굴림", Gulim, sans-serif;
+                font-size: 200px;
+                font-weight: bold;
+                /*nomal, light, bold, bolder */
+                /*100,200,300,400,500 */
+                font-style: italic; /*기울임꼴*/
+                font-variant: small-caps; /*작은 대문자표현*/
+                text-align: center; /*글자 가운데로(inline) */
+
+
+            }
+        </style>
+        font_family
+        <div id="font_target">
+            font_family
+            dkfjDIFJdf
+        </div>
+
+        <style>
+         #line_target{
+             line-height: 100px; /*줄 높이 지정*/
+             vertical-align: top; /*상하 정렬: 상단 */
+             text-decoration: underline; /*글자 꾸미기 :밑줄*/
+             /*underline overline line-though*/
+             letter-spacing: 10px; /*자간(글자사이 간격)*/
+             text-indent: 10px; /*들여 쓰기*/
+             text-transform: uppercase; /*대문자로 표현하기*/
+             /*uppercase lowercases*/
+             white-space: pre; /*띄어쓰기, 엔터 모두다 그대로*/
+
+
+         }
+        </style>
+        <div id="line_target">
+            dkfjDIFJdf
+            content  content  conte  nt  content  content  content  content  content  content 
+              tent  cont             ent  content  content  content  content  content  content  content  
+            conten   t  con      tent  content  content  content  content  content  content  content  content  content 
+
+        </div>
+    
+        <style>
+            @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+            @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+         #google_font{
+            font-family: 'Nanum Pen Script', cursive;
+
+            font-family: 'Indie Flower', cursive;
+         }
+        </style>
+        google_font
+        <div id="google_font">google_font</div>
     </body>
 </html>
