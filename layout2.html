@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>레이아웃2</title>
+        <meta charset="utf-8">
+        <style>
+            header>h1>span:nth-child(1){
+                color:white;
+            }
+            header>h1>span:nth-child(2){
+                color:#cfc91d;
+                /*cfc91d 색*/
+            }
+            header{
+                background-color: #02918c;
+                color:white;
+                
+            }
+            header>h1{
+                float: left;
+                margin:0px;
+            }
+            nav>ul>li{
+                float: left;
+                /*가로정렬*/
+                list-style: none;
+                /*동그라미 없앰*/
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .clear{
+                /*클리어는 float로 나간애들 돌아오게함*/
+                clear:both;
+                height:0px;
+                overflow:hidden;
+            }
+            header>nav{
+                float:right;
+               
+            }
+            header>nav>ul{
+                margin:9px;
+            }
+            #main_visual{
+                padding-top: 150px;
+                padding-bottom: 150px;
+                background-image: url("images/layout2_visual.jpg");
+                background-position: 50% 50%;
+                /*배경그림-위치 : 가로 세로 */
+                background-size: auto 150%;
+                /*배경그림-크기 : 가로 세로*/
+                background-repeat: no-repeat;
+                /*no-repeat(반복안함), repeat(기본, 반복함/바둑판식), repeat-x, repeat-y */
+                background-color: #000;
+                color:white;
+                text-align:center;
+            }
+            #main_visual h2{
+                margin:0px;
+                letter-spacing: 10px;
+                text-transform: uppercase;
+                font-family: sans-serif;
+                font-size:45px;
+            }
+            #main_visual div:nth-child(1){
+                font-size: 20px;
+
+            }
+            #main_visual div:nth-child(3){
+                font-size: 15px;
+
+            }
+            #main_visual div:nth-child(4){
+                margin-top:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <span>MY</span><span>FOLIO</span>
+                <!--띄어쓰거나 엔터치면 한칸 띄어짐 my folio-->
+                <!--div(블록), span(라인)-->
+               
+            </h1>
+            <nav>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT ME</li>
+                <li>SERVICE</li>
+                <li>MY WORK</li>
+                <li>CONTACT ME</li>
+                <div class="clear"></div>
+            </ul>
+            </nav>
+            <div class="clear"></div>
+        </header>
+        <div id="main_visual">
+            <div>Lorem ipsum dolor sit iusmod tempor</div>
+            <h2>incididunt bore</h2>
+            <div>Orem ipsum dolor sit amet, consectetur</div>
+            <div>
+            <a href="#">
+                <img src="images/layout2_button.jpg">
+            </a>
+            </div>
+        </div>
+        <section>content1</section>
+        <section>content2</section>
+    </body>
+</html>
