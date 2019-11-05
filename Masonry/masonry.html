@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jquery-3.2.1.min.js"></script>
+		<!--제이쿼리 라이브러리 불러오기-->
+	<script src="masonry.pkgd.min.js"></script>
+	<!--masonry 라이브러리 불러오기-->
+	<style type="text/css">
+		.grid{width: 100%;}
+		.grid-item {
+		 width: 200px;/*한칸짜리*/
+		}
+		.grid-item--width2 {
+			 width: 400px; /*두칸짜리*/
+		}
+		img{
+			width:100%;
+			display: block;
+		}
+	</style>
+	<!--javascript 자바 스크립트-->
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$('.grid').masonry({
+				// options
+				itemSelector: '.grid-item',
+				columnWidth: 200
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="grid">
+	  <div class="grid-item">
+	  	<img src="layout3_img1.jpg" />
+	  </div>
+	  <div class="grid-item grid-item--width2">
+	  	<img src="layout3_img2.jpg" />
+	  </div>
+	  <div class="grid-item">
+	  	<img src="layout3_img3.jpg" />
+	  </div>
+	  <div class="grid-item">
+	  	<img src="layout3_img4.jpg" />
+	  </div>
+	  <div class="grid-item grid-item--width2">
+	  	<img src="layout3_img5.jpg" />
+	  </div>
+	  <div class="grid-item grid-item--width2">
+	  	<img src="layout3_img6.jpg" />
+	  </div>
+	  <div class="grid-item">
+	  	<img src="layout3_img7.jpg" />
+	  </div>
+	  <div class="grid-item">
+	  	<img src="layout3_img8.jpg" />
+	  </div>
+	  <div class="grid-item grid-item--width2">
+	  	<img src="layout3_img9.jpg" />
+	  </div>
+	  <div class="grid-item">
+	  	<img src="layout3_img10.jpg" />
+	  </div>
+	  <div class="grid-item">
+	  	<img src="layout3_img11.jpg" />
+	  </div>
+	</div>
+</body>
+<a href="index.html">돌아가기</a>
+</html>

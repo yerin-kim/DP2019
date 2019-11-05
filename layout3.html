@@ -3,11 +3,102 @@
     <head>
         <title>레이아웃3</title>
         <meta charset="utf-8"/>
+        <style>
+
+        nav>ul>li{
+                float: left;
+                /*가로정렬*/
+                list-style: none;
+                /*동그라미 없앰*/
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        header ul{
+            padding:0px;
+            margin:5px 0px;
+        }
+        .clear{
+            clear:both;
+            height: 0px;
+            overflow: hidden;
+        }
+        .short_line{
+            width: 30px;
+            height:0px;
+            border-bottom:solid 1px gray;
+            margin:5px 0px;
+
+        }
+        .long_line{
+            width:90px;
+            height: 0px;
+            border-bottom: solid 1px gray;
+        }
+        .image_part>div{
+            background-color: black;
+            color:white;
+            display: block; /*div는 블록형 태그*/
+            display: inline-block; /*인라인과 블록의 중간적인 성질*/
+            padding: 5px;
+            position:static; /*서로 밀고 당기는 방식*/
+            position: absolute;/*절대적인*/
+            bottom:0px;
+            left:0px;
+        }
+        .image_part{
+            position: relative; /*관계형*/
+            /*relative로 설정하면 자식 absolute의 기준이 됨*/
+        }
+        .image_part img{
+            /*본래 inline인데 밑공간이 생겨서 block으로 변경*/
+            display: block;
+        }
+        .card{
+            width:310px;
+            background-color: white;
+            border-right: solid 2px #ddd;
+            border-bottom: solid 2px #ddd;
+            margin:0px 40px 40px 0px;
+            /*20px+310px+2px+20px = 실제 가로 사이즈*/ 
+            float: left;
+        }
+        .card h2{
+            margin:0px;
+        }
+        .date{
+            margin:8px 0px;
+        }
+        .info_part h2{
+            /*특정도 더 큼*/
+            font-size: 20px;
+        }
+        .info_part{
+            font-size:5px;
+            padding: 30px
+        }
+        footer img{
+            margin-left:50px;
+
+        }
+        .font_bold{
+            font-weight: bold;
+        }
+        footer div{
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+        #wrap{
+            padding:100px;
+        }
+
+        </style>
     </head>
     <body>
         <div id="wrap">
             <header>
                 <h1>Gridly</h1>
+                <div class="clear"></div>
+                <div class="short_line"></div>
                 <nav>
                     <ul>
                         <li>home</li>
@@ -16,8 +107,11 @@
                         <li>branding/identity</li>
                         <li>about me</li>
                         <li>contact</li>
+                        <div class="clear"></div>
                     </ul>
+                    <div class="short_line"></div>
                 </nav>
+
             </header>
             <div id="content"> <!--아이디 유일하게 하나 사용-->
                 <div class="card"><!--여러개 사용-->
@@ -27,12 +121,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -42,12 +139,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -57,12 +157,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -72,12 +175,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -87,12 +193,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -102,12 +211,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -117,12 +229,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -132,12 +247,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -147,12 +265,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -162,12 +283,15 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="card"><!--여러개 사용-->
@@ -177,15 +301,28 @@
                     </div>
                     <div class="info_part">
                         <h2>Dulux Colour Awards</h2>
-                        <div>12th October 2011</div>
+                        <div class="date">12th October 2011</div>
+                        <div class="long_line"></div>
                         <p>A direct mail kit that announces the Dulux Colour Awards Competition has commenced. 
                             A collection of posters showing the famous colours of history,
                             advertises you add your own colours to history.</p>
+                            <div class="long_line"></div>
                         <div>Read On -></div>
                     </div>
+                    
                 </div>
+                <div class="clear"></div>
             </div>
-            <footer>footer</footer>
+            <footer>
+                <div class="short_line"></div>
+                <img src="images/layout3_icon1.png">
+                <img src="images/layout3_icon2.png">
+                <img src="images/layout3_icon3.png">
+                <img src="images/layout3_icon4.png">
+                <div class="short_line"></div>
+                <div class="font_bold">This website & the Internet Ends hereg</div>
+                <div>Copyright 2011 Showcase Design www.BlazRobar.com</div>
+            </footer>
         </div>
         <a href="index.html">돌아가기</a>
     </body>
