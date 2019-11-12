@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>responsive web</title>
+        <meta charset="utf-8"/>
+        <!--반응형 웹 설정-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <style>
+        /*1. 12단 그리드 방식*/
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;} /*12칸 일때 */
+        div{
+            border: solid 1px black;
+        }
+        [class*="col-"] {
+            /*클래스 이름에 "col-"가 포함 되어 있을때*/
+            float: left;
+        }
+        /*2. Media Query*/
+        	/*
+				모바일 320px ~ 767px
+				타블렛 768px ~ 1023px or 1199px
+				PC 1200px 이상 or 1024px 이상
+			*/
+			body{background-color: green;}
+			@media screen and (max-width: 1920px) {
+                /*스크린의 넓이가 1920px 이하일때*/
+  				body{background-color: blue;}
+			}
+			@media screen and (max-width: 1023px){
+				body{background-color: red;}
+			}
+			@media screen and (max-width: 767px){
+				body{background-color: yellow;}
+			}
+        </style>
+    </head>
+    <body>
+        <div class="col-1">col-1</div>
+        <div class="col-2">col-2</div>
+        <div class="col-3">col-3</div>
+        <div class="col-4">col-4</div>
+        <div class="col-5">col-5</div>
+        <div class="col-6">col-6</div>
+        <div class="col-7">col-7</div>
+        <div class="col-8">col-8</div>
+        <div class="col-9">col-9</div>
+        <div class="col-10">col-10</div>
+        <div class="col-11">col-11</div>
+        <div class="col-12">col-12</div>
+
+
+    </body>
+</html>
