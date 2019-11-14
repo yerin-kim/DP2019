@@ -4,6 +4,84 @@
         <title>디지털 퍼블리싱2 웹사이트</title>
 
         <style>
+
+        .clear{
+            /*클리어는 float로 나간애들 돌아오게함*/
+            clear:both;
+            height:0px;
+            overflow:hidden;}
+            /*{지움:양쪽; 높이:0; 넘치면:숨김;}*/
+        body{
+            text-align: center;
+            background-color: #f2e6ff; 
+            margin:0px;
+        }
+        header{
+            background-color: #e3d0f7;
+        }
+        header>h1{
+            color: #ae63f8;
+            height: 70px;
+            float: left;
+            padding-left: 30px;
+            padding-top: 25px;
+            margin: 0px;
+        }
+        header>h2{
+            color: #c38afc;
+            float: right;
+            padding-right: 30px;
+            padding-top: 25px;
+        }
+        #layout>ul>li{
+            float: left;
+            list-style: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color:#ccccff;
+            font-size: 20px;
+        }
+        #layout>ul>li:nth-child(1){
+            width: 300px;
+            height: 150px;
+            padding:20px;
+            margin: 30px;
+            /*text-align: center;*/
+            background-color: thistle;
+        }
+        #layout>ul>li:nth-child(2){
+            width: 300px;
+            height: 150px;
+            padding:20px;
+            margin: 30px;
+            background-color: rgb(189, 175, 189);
+        }
+        #layout>ul>li:nth-child(3){
+            width: 300px;
+            height: 150px;
+            padding:20px;
+            margin: 30px;
+            background-color: rgb(206, 196, 243);
+        }
+        #layout a{
+            text-decoration: none;
+            /*a태그에 밑줄 없음*/
+        }
+        #imweb a{
+            text-decoration: none;
+        }
+        #imweb {
+            width: 1150px;
+            height: 150px;
+            padding:20px 20px;
+            margin: 30px 30px;
+            background-color: rgb(202, 167, 204);
+        }
+        #practice a{
+            text-decoration: none;
+            color:cornflowerblue;
+            font-size: 12px;
+        }
         footer{
             background-color: rgb(129, 129, 129);
             color:rgb(7, 7, 7);
@@ -18,19 +96,40 @@
         #footer_left{
            float:left;
         }
+        #wrap{
+            min-width: 900px;
+            max-width: 1920px;
+            margin:0px auto;/*상하 좌우*/
+        }
         </style>
     </head>
     <body>
-        <h1>INDEX</h1>
+        <div id="wrap">
+        <header>
+        <h1>INDEX </h1>
         <h2>2019 Digital Publishing Design</h2>
+        <div class="clear"></div>
+        </header>
         <br>
-        <a href="layout1.html"><img src="images/layout3_icon4.png"></a>
-        <a href="layout2.html"><input type="button" value="layout2"/></a>
-        <a href="layout3.html">LAYOUT3</a>
-        
+
+        <div id="layout">
+        <ul>
+        <li><a href="layout1.html">LAYOUT1 <img src="images/chat.png" width="70px"></a></li>
+        <li><a href="layout2.html">LAYOUT2 <img src="images/chat.png" width="70px"></a></li>
+        <li><a href="layout3.html">LAYOUT3 <img src="images/chat.png" width="70px"></a></li>
+        </ul>
+        <div class="clear"></div>
+        </div>
+
         <br/>
+        <div id="imweb">
+            <a href="IMWeb.html">IMWeb</a>
+        <div class="clear"></div>
+        </div>
+
         <hr>
-        <h4>수업 참고 자료</h4> 
+        <h5>▼ 수업 참고 자료 ▼</h5> 
+        <div id="practice">
         <a href="training.html">HTML연습</a>
         <!--anchor 태그-->
         <a href="html_part1.html">자유주제</a>
@@ -39,9 +138,12 @@
         <a href="Masonry/masonry.html">Masonry</a>
         <a href="responsive.html">반응형 웹</a>
         <br/>
+        </div>
+      
       
         <footer>
             
         </footer>
+        </div>
     </body>
 </html>
