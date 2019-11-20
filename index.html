@@ -13,7 +13,7 @@
             /*{지움:양쪽; 높이:0; 넘치면:숨김;}*/
         body{
             text-align: center;
-            background-color: #f2e6ff; 
+            background-color: #f7efff; 
             margin:0px;
         }
         header{
@@ -40,6 +40,7 @@
             padding-right: 10px;
             background-color:#ccccff;
             font-size: 20px;
+            border-radius: 40px 40px 40px 40px / 40px 40px 40px 40px;
         }
         #layout>ul>li:nth-child(1){
             width: 300px;
@@ -76,25 +77,55 @@
             padding:20px 20px;
             margin: 30px 30px;
             background-color: rgb(202, 167, 204);
+            font-size: 30px;
+            text-align: center;
+            color:darkslateblue;
+            border-radius: 40px 40px 40px 40px / 40px 40px 40px 40px;
         }
         #practice a{
             text-decoration: none;
             color:cornflowerblue;
             font-size: 12px;
         }
+        #practice {
+            height: 120px;
+            padding-top: 50px;
+        }
         footer{
-            background-color: rgb(129, 129, 129);
-            color:rgb(7, 7, 7);
+            background-color: rgb(248, 246, 246);
+            color:rgb(30, 19, 49);
             padding:30px;
+            margin:0px;
+        }
+        #Reserved{
+            text-align: left;
+            padding: 10px;
+            font-size: 12px;
         }
         footer ul>li{
             float: left; /*둥둥떠다니게 :왼쪽기준;*/
             list-style: none; /*목록모양 (동그라미) :없음 */
             padding-left: 5px;
             padding-right: 5px;
+            margin:0px;
+        }
+        footer #n_list li{
+            float: left; /* 왼쪽 기준으로 둥둥 떠다니게, 흐르듯이 배치 */
+            list-style: none; /* li 기본 표시(동그라미) 없음(none)*/
+            padding-right: 10px;
+            border-right: solid 2px gray;
+            /* 경계선: 실선 2픽셀 회색; */
+        }
+        footer #n_list li a{
+            text-decoration: none;
         }
         #footer_left{
            float:left;
+        }
+        #i_list{
+            float: right;
+            padding:10px;
+            margin:0px;
         }
         #wrap{
             min-width: 900px;
@@ -123,13 +154,14 @@
 
         <br/>
         <div id="imweb">
-            <a href="IMWeb.html">IMWeb</a>
+            <a href="IMWeb.html"><img src="images/index_sign.png" width="80px">&nbsp;IMWeb_CAFE in SEOUL&nbsp;<img src="images/index_sign.png" width="80px"></a>
         <div class="clear"></div>
         </div>
 
-        <hr>
-        <h5>▼ 수업 참고 자료 ▼</h5> 
+
         <div id="practice">
+                <hr>
+        <h5>▼ 수업 참고 자료 ▼</h5> 
         <a href="training.html">HTML연습</a>
         <!--anchor 태그-->
         <a href="html_part1.html">자유주제</a>
@@ -142,7 +174,32 @@
       
       
         <footer>
-            
+            <div>
+                <div id="footer_left">
+                <ul id="n_list">
+                    <li><a href="index.html">INDEX</a></li>
+                    <li><a href="https://www.instagram.com/yeringnl10/?hl=ko">INSTAGRAM</a></li>
+                    <li><a href="https://blog.naver.com/kimyelin971">MY BLOG</a></li>
+                    <li>CONTACT ME</li>
+                    <div class="clear"></div>
+                </ul>
+                <div id="Reserved">
+                <div>ⓒ 2019 kimyerin. All Right Reserved.</div>
+                <div>the loges in the design are the property
+                of their respective owners/copyright holders</div>
+                <div>tel. 010-3682-8956</div>
+                <div>email. yelynn971@gmail.com</div>
+                </div>
+                </div>
+                <ul id="i_list">
+                        <li><a href="index.html"><img src="images/index_list.png" width="30px"/></a></li>
+                        <li><a href="https://www.instagram.com/yeringnl10/?hl=ko"><img src="images/index_instagram.png" width="30px"/></a></li>
+                        <li><a href="https://blog.naver.com/kimyelin971"><img src="images/index_blog.png" width="30px"/></a></li>
+                        <li><img src="images/index_at.png" width="30px"/></li>
+                        <li><img src="images/index_m.png" width="30px"/></li>
+                    </ul>
+                <div class="clear"></div>
+            </div>
         </footer>
         </div>
     </body>

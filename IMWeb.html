@@ -1,11 +1,308 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>예링 로그</title>
+        <title>CAFE</title>
+        <style>
+        #wrap{
+        min-width: 900px;
+        max-width: 1920px;
+        margin:0px auto;/*상하 좌우*/
+        }
+        .clear{
+            /*클리어는 float로 나간애들 돌아오게함*/
+            clear:both;
+            height:0px;
+            overflow:hidden;}
+            /*{지움:양쪽; 높이:0; 넘치면:숨김;}*/
+        header{
+        background-color: #e3d0f7;
+        }
+        header>h1{
+            color: #8f2af3;
+            height: 70px;
+            float: left;
+            padding-left: 30px;
+            padding-top: 25px;
+            margin: 0px;
+        }
+        header>h3{
+            color: #983bf5;
+            float: left;
+            padding-right: 30px;
+            padding-top: 25px;
+        }
+        nav>ul>li{
+            float: right;
+            /*가로정렬*/
+            list-style: none;
+            /*동그라미 없앰*/
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #b87ef1;
+            font-size: 22px;
+        }
+        nav>ul>li a{
+            text-decoration: none;
+        }
+        #find{
+            float: right;
+            width: 250px;
+            background-color: white;
+        }
+        .part{
+            width: 1100px;
+            height: 40px;
+            margin: 35px;
+            padding-left:20px;
+            padding-top:20px;
+            background-color: rgb(228, 222, 248);
+            color:rgb(149, 114, 245);
+        }
+        .card1{
+            border-right: solid 2px #ddd;
+            border-bottom: solid 2px #ddd;
+            width: 470px;
+            height: 250px;
+            padding: 15px;
+            padding-right: 40px;
+            margin: 20px 20px 20px 40px;
+            float: left;
+        }
+        .card2{
+            border-right: solid 2px #ddd;
+            border-bottom: solid 2px #ddd;
+            width: 470px;
+            height: 250px;
+            padding: 15px;
+            padding-right: 40px;
+            margin: 20px 40px 20px 10px;
+            float: right;
+        }
+        dt{
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        dd{ margin: 0px; }
+        .img_part{
+            float: left;
+            width: 250px;
+            
+        }
+        .info_part{
+            float: right;
+            color:rgb(152, 77, 221);
+            font-family:fantasy;
+        }
+        footer{
+            background-color: rgb(248, 246, 246);
+            color:rgb(30, 19, 49);
+            padding:30px;
+        }
+        #Reserved{
+            text-align: left;
+            padding: 10px;
+            font-size: 12px;
+        }
+        footer ul>li{
+            float: left; /*둥둥떠다니게 :왼쪽기준;*/
+            list-style: none; /*목록모양 (동그라미) :없음 */
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        footer #n_list li{
+            float: left; /* 왼쪽 기준으로 둥둥 떠다니게, 흐르듯이 배치 */
+            list-style: none; /* li 기본 표시(동그라미) 없음(none)*/
+            padding-left: 10px;
+            padding-right: 10px;
+            border-right: solid 2px gray;
+            /* 경계선: 실선 2픽셀 회색; */
+        }
+        footer #n_list li a{
+            text-decoration: none;
+        }
+        #footer_left{
+           float:left;
+        }
+        #i_list{
+            float: right;
+            padding:10px;
+        }
+        </style>
     </head>
     <body>
-        <header>header</header>
+    <div id="wrap">
+        <header>
+            <h1>CAFE</h1>
+            <h3>___서울의 카페 소개 페이지</h3>
+            <nav>
+                <ul>
+                    <!--<li><a href="https://www.instagram.com/yeringnl10/?hl=ko"><h5>INSTAGRAM</h5></a></li>-->
+                    <li><a href="layout3.html"><h5>LAYOUT3</h5></a></li>
+                    <li><a href="layout2.html"><h5>LAYOUT2</h5></a></li>
+                    <li><a href="layout1.html"><h5>LAYOUT1</h5></a></li>
+                    <li><a href="https://blog.naver.com/kimyelin971"><h5>MY BLOG</h5></a></li>
+                    <li><a href="index.html"><h5>INDEX</h5></a></li>
+                    <div class="clear"></div>
+                </ul>
+                </nav>
+            <div class="clear"></div>
+        </header>
+        <br>
 
-        <footer>footer</footer>
+        <div id="find">
+            <textarea cols="20" rows="1"> </textarea> 
+            <img src="images/layout1_head_zoom.jpg">
+            <br>
+            <div class="clear"></div>    
+        </div>
+
+        <div id="content1">
+            <div class="part">관악구</div>
+            <div class="card1">
+                <div class="img_part">
+                    <img src="images/im1.jpg" width="250" >
+                </div>
+                <div class="info_part">
+                    <dl>
+                    <dt>piggy's favorite <br></dt>
+                    <hr> 
+                    <dd>서울 관악구 봉천로 532 1층</dd>
+                    </dl>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="card2">
+                    <div class="img_part">
+                        <img src="images/im4.jpg" width="250" >
+                    </div>
+                    <div class="info_part">
+                        <dl>
+                        <dt>cafe frame <br></dt>
+                        <hr> 
+                        <dd>서울 관악구 남부순환로231길</dd>
+                        </dl>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            <div class="clear"></div>
+            <div class="card1">
+                    <div class="img_part">
+                        <img src="images/im3.jpg" width="250" >
+                    </div>
+                    <div class="info_part">
+                        <dl>
+                        <dt>cafe Lilt <br></dt>
+                        <hr> 
+                        <dd>서울 관악구 행운1길 50</dd>
+                        </dl>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="card2">
+                        <div class="img_part">
+                            <img src="images/im2.jpg" width="250" >
+                        </div>
+                        <div class="info_part">
+                            <dl>
+                            <dt>cafe modoru <br></dt>
+                            <hr> 
+                            <dd>서울 관악구 관악로12길 45-9</dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                <div class="clear"></div>
+        </div>
+        <div id="content1">
+            <div class="part">강남구</div>
+            <div class="card1">
+                <div class="img_part">
+                    <img src="images/im5.jpg" width="250" >
+                </div>
+                <div class="info_part">
+                    <dl>
+                    <dt>panel cafe <br></dt>
+                    <hr> 
+                    <dd>서울 강남구 언주로164길 14</dd>
+                    </dl>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="card2">
+                    <div class="img_part">
+                        <img src="images/im6.jpg" width="250" >
+                    </div>
+                    <div class="info_part">
+                        <dl>
+                        <dt>Cre8 Cookies <br></dt>
+                        <hr> 
+                        <dd>서울 강남구 테헤란로25길 36</dd>
+                        </dl>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            <div class="clear"></div>
+        </div>
+        <div id="content1">
+            <div class="part">서초구</div>
+            <div class="card1">
+                    <div class="img_part">
+                        <img src="images/im7.jpg" width="250" >
+                    </div>
+                    <div class="info_part">
+                        <dl>
+                        <dt>CUORE espresso <br></dt>
+                        <hr> 
+                        <dd>서울 서초구 강남대로 275</dd>
+                        </dl>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="card2">
+                        <div class="img_part">
+                            <img src="images/im8.jpg" width="250" >
+                        </div>
+                        <div class="info_part">
+                            <dl>
+                            <dt>lower garden <br></dt>
+                            <hr> 
+                            <dd>서울 서초구 사평대로57길 28</dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                <div class="clear"></div>
+        </div>
+        <footer>
+                <div>
+                <div id="footer_left">
+                <ul id="n_list">
+                    <li><a href="index.html">INDEX</a></li>
+                    <li><a href="https://www.instagram.com/yeringnl10/?hl=ko">INSTAGRAM</a></li>
+                    <li><a href="https://blog.naver.com/kimyelin971">MY BLOG</a></li>
+                    <li>CONTACT ME</li>
+                    <div class="clear"></div>
+                </ul>
+                <div id="Reserved">
+                <div>ⓒ 2019 kimyerin. All Right Reserved.</div>
+                <div>the loges in the design are the property
+                of their respective owners/copyright holders</div>
+                <div>tel. 010-3682-8956</div>
+                <div>email. yelynn971@gmail.com</div>
+                </div>
+                </div>
+                <ul id="i_list">
+                        <li><a href="index.html"><img src="images/index_list.png" width="30px"/></a></li>
+                        <li><a href="https://www.instagram.com/yeringnl10/?hl=ko"><img src="images/index_instagram.png" width="30px"/></a></li>
+                        <li><a href="https://blog.naver.com/kimyelin971"><img src="images/index_blog.png" width="30px"/></a></li>
+                        <li><img src="images/index_at.png" width="30px"/></li>
+                        <li><img src="images/index_m.png" width="30px"/></li>
+                    </ul>
+                <div class="clear"></div>
+            </div>
+        </footer>
+    </div>
     </body>
 </html>
