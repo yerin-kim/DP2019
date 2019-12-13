@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function f3(a,b){ //인자값이 있고 리턴이 있는 함수 선언
+                return(a+b)+"입니다";
+            }
+            var str; //str이라는 변수 (variable)를 생성합니다
+            str = f3(3,4); //함수의 호출
+        </script>
+        <button onclick="alert(str)">str 출력</button>
+
+        <script>
+            function f4(a){
+                for(var i=0; i<a; i++){
+                    //i는 0, i는 a보다 작을때까지, i는 점점 커지면서
+                    alert(i+'번');
+                }
+            }
+        </script>
+        <button onclick="f4(3)">3회 반복</button>
+        <button onclick="f4(4)">4회 반복</button>
+    </head>
+
+    <style>
+            .box_border{
+                border: solid 1px black;
+                margin: 10px;
+            }
+        </style>
+        <script>
+            function make_box(){
+                var box_num = prompt('몇개나 만들까요?', '2');
+                var target_div = document.getElementById("box_target");
+                for(var i=0; i<box_num; i++){
+                    var node = document.createElement("div");                 // Create a <div> node
+                    var textnode = document.createTextNode(i+"번째 박스");         // Create a text node
+                    node.classList.add("box_border");
+                    node.appendChild(textnode);
+                    target_div.appendChild(node);
+                }
+            }
+        </script>
+        <div id="box_target">여기에 박스가 생성 됩니다.</div>
+        <button onclick="make_box()">박스 만들기</button>
+
+
+        <div>
+            나의 이름은
+            <span id="name_span">홍길동</span>
+        </div>
+        <script>
+            var target_span; //변수의 생성
+            target_span = document.getElementById('name_span');
+            //대상 찾기
+            target_span.innerHTML = "철수";
+            //내부 글자 변경
+            function name_change(name){
+                target_span.innerHTML = name;
+
+            }
+        </script>
+        <button onclick="name_change('영수')">영수</button>
+        <button onclick="name_change('영희')">영희</button>
+
+        <style>
+            #red_div{ 
+                transition: color 0.5s;
+                transition: font-size 0.5s;
+                /*transition:애니메이션 효과*/
+            }
+            .red_text{
+                color:red;
+                font-size: 50px;
+            }
+        </style>
+        <div id="red_div" class="red_text">빨간 글씨</div>
+        <script>
+            var target_div; //변수의 선언
+            target_div = document.getElementById('red_div');
+            //대상찾기
+            target_div.classList.add('red_text');
+            //클래스 리스트에 red_text를 추가합니다.
+            function make_red(){
+                target_div.classList.toggle('red_text');
+                //토글합니다. (변경합니다)
+            }
+        </script>
+        <button onclick="make_red()">글씨색 변경</button>
+
+
+        <style> /*좌우기능 추가*/
+                #b_red{
+                    background-color: red;
+                }
+                #b_blue{
+                    background-color: blue;
+                }
+                #b_yellow{
+                    background-color: yellow;
+                }
+                #b_green{
+                    background-color: green;
+                }
+                [id*="b_"]{
+                    width: 25%;
+                    height: 200px;
+                    float: left;
+                }
+                #container{
+                    width: 400%;
+                    position: absolute;
+                    transition: left 0.5s;
+                }
+                .m_0{ left: 0% }
+                .m_1{ left: -100% }
+                .m_2{ left: -200% }
+                .m_3{ left: -300% }
+                #frame{
+                    height: 200px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .clear{
+                    clear: both;
+                    height: 0px;
+                    overflow: hidden;
+                }
+            </style>
+            <script>
+                var save_idx = 0;
+                function change_con(idx){
+                    save_idx = idx;
+                    var target = document.getElementById("container");
+                    target.classList = ""
+                    target.classList.add("m_"+idx);
+                }
+            </script>
+            <div id="frame">
+                <div id="container" class="m_0">
+                    <div id="b_red">content1</div>
+                    <div id="b_blue">content2</div>
+                    <div id="b_yellow">content3</div>
+                    <div id="b_green">content4</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <button onclick="change_con(0)">content1</button>
+            <button onclick="change_con(1)">content2</button>
+            <button onclick="change_con(2)">content3</button>
+            <button onclick="change_con(3)">content4</button>
+            <script>
+                function left_con(){
+                    if(save_idx > 0){
+                        save_idx --;
+                        change_con(save_idx);
+                    }
+                }
+                function right_con(){
+                    if(save_idx < 3){
+                        save_idx ++;
+                        change_con(save_idx);
+                    }
+                }
+            </script>
+            <button onclick="left_con()">go left</button>
+            <button onclick="right_con()">go right</button>
+</html>
